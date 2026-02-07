@@ -1,0 +1,150 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+ 
+body{
+  height:100vh;
+  background: linear-gradient(135deg,#fdf2f8,#fdecef,#fff1f5);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family:'Poppins',sans-serif;
+  overflow:hidden;
+}
+ 
+/* Glass Card */
+.card{
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(20px);
+  border-radius:25px;
+  padding:60px 50px;
+  text-align:center;
+  box-shadow:0 30px 60px rgba(0,0,0,0.15);
+  border:1px solid rgba(255,255,255,0.4);
+  min-width:320px;
+}
+ 
+h1{
+  font-family:'Playfair Display',serif;
+  font-size:2.8rem;
+  color:#5a2a38;
+  margin-bottom:35px;
+}
+ 
+/* Buttons Area */
+.btns{
+  position:relative;
+width:100%;
+  height:120px;
+  
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:25px;
+margin-top:20px;
+}
+ 
+/* All Buttons */
+button{
+  padding:14px 38px;
+  border:none;
+  border-radius:50px;
+  font-size:1.05rem;
+  font-weight:500;
+  cursor:pointer;
+  transition:all .3s ease;
+}
+ 
+/* YES Button */
+#yes{
+  background: linear-gradient(135deg,#ec4899,#f472b6);
+  color:white;
+  box-shadow:0 8px 20px rgba(236,72,153,0.4);
+}
+ 
+#yes:hover{
+  transform:scale(1.07);
+}
+ 
+/* NO Button */
+#no{
+  background:#f1f1f1;
+  color:#444;
+  position:relative;
+  box-shadow:0 6px 15px rgba(0,0,0,0.15);
+}
+#myPhoto{
+  display: none;
+ 
+  margin: 25px auto 0 auto;   /* centers horizontally */
+ 
+  width: 200px;
+  border-radius: 15px;
+ 
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+ 
+  display: block;
+}
+/* Photo Container */
+.photo-box{
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin: 25px auto 0;
+}
+ 
+/* Photos */
+.photo-box img{
+  position: absolute;
+  inset: 0;
+ 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ 
+  border-radius: 18px;
+ 
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+ 
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+ 
+/* First visible */
+#photo1{
+  opacity: 1;
+  transform: scale(1);
+}
+ 
+/* Second hidden */
+#photo2{
+  opacity: 0;
+  transform: scale(0.9);
+}
+ 
+#no:hover{
+  background:#eee;
+}
+ 
+/* Yay Text */
+#yay{
+  display:none;
+  margin-top:25px;
+  font-size:3.2rem;
+  font-family:'Playfair Display',serif;
+  color:#ec4899;
+  animation:pulse 1s infinite alternate;
+}
+ 
+@keyframes pulse{
+  from{transform:scale(1);}
+  to{transform:scale(1.1);}
+}
+ 
+/* Fireworks */
+canvas{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+}
